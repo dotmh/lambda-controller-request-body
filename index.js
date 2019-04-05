@@ -3,7 +3,7 @@ const querystring = require('querystring');
 module.exports = {
     get json() {
         try {
-            return JSON.parse(this.rawPost);
+            return this.rawPost ? JSON.parse(this.rawPost) : null;
         } catch (error) {
             console.error(error);
             return null;
@@ -11,7 +11,7 @@ module.exports = {
     },
 
     get urlencoded() {
-        return querystring.parse(this.rawPost);
+        return this.rawPost ? querystring.parse(this.rawPost) : null;
     },
 
     get plain() {
