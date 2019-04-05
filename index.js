@@ -3,7 +3,7 @@ const querystring = require('querystring');
 module.exports = {
     get json() {
         try {
-            return JSON.parse(this.post);
+            return JSON.parse(this.rawPost);
         } catch (error) {
             console.error(error);
             return null;
@@ -11,14 +11,14 @@ module.exports = {
     },
 
     get urlencoded() {
-        return querystring.parse(this.post);
+        return querystring.parse(this.rawPost);
     },
 
     get plain() {
-        return this.post;
+        return this.rawPost;
     },
 
-    get post() {
+    get rawPost() {
         const postData = this.event.body;
         if(!this.isPost() || (this.isPost() && !postData)) {
             return null;
