@@ -1,59 +1,71 @@
 const querystring = require("querystring");
 
 module.exports = {
-	get json() {
+	get jsonBody() {
 		try {
-			return this.rawPost ? JSON.parse(this.rawPost) : null;
+			return this.rawRequestBody ? JSON.parse(this.rawRequestBody) : null;
 		} catch (error) {
 			console.error(error);
 			return null;
 		}
 	},
 
-	get urlencoded() {
-		return this.rawPost ? querystring.parse(this.rawPost) : null;
+	get urlencodedBody() {
+		return this.rawRequestBody ? querystring.parse(this.rawRequestBody) : null;
 	},
 
-	get plain() {
-		return this.rawPost;
+	get plainBody() {
+		return this.rawRequestBody;
 	},
 
-	get post() {
-		let postData;
+	get requestBody() {
+		let requestBody;
 
 		switch (this.event["Content-Type"]) {
 			case "application/json":
-				postData = this.json;
+				requestBody = this.json;
 				break;
 			case "application/x-www-form-urlencoded":
-				postData = this.urlencoded;
+				requestBody = this.urlencoded;
 				break;
 			case "text/plain":
-				postData = this.plain;
+				requestBody = this.plain;
 				break;
 			default:
-				postData = null;
+				requestBody = null;
 				break;
 		}
 
-		return postData;
+		return requestBody;
 	},
 
-	get rawPost() {
-		const postData = this.event.body;
-		if (!this.isPost() || (this.isPost() && !postData)) {
+	get post() {
+		return this.requestBody
+	},
+
+	get put() {
+		return this.requestBody
+	},
+
+	get patch() {
+		return this.requestBody
+	},
+
+	get rawRequestBody() {
+		const requestBody = this.event.body;
+		if (this.isAllowedRequestBody() === false || (this.isAllowedRequestBody() && !requestBody)) {
 			return null;
 		}
 
 		if (this.event.isBase64Encoded) {
-			return this._base64decode(postData);
+			return this._base64decode(requestBody);
 		}
 
-		return postData;
+		return requestBody;
 	},
 
-	isPost() {
-		return this.event.httpMethod.toLowerCase() === "post";
+	isAllowedRequestBody() {
+		return ["POST", "PUT", "PATCH"].includes(this.event.httpMethod.toUpperCase());
 	},
 
 	_base64decode(text) {
