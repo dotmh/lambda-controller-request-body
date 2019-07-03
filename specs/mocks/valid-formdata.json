@@ -1,0 +1,127 @@
+{
+  "resource": "/",
+  "path": "/",
+  "httpMethod": "PUT",
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate",
+    "cache-control": "no-cache",
+    "CloudFront-Forwarded-Proto": "https",
+    "CloudFront-Is-Desktop-Viewer": "true",
+    "CloudFront-Is-Mobile-Viewer": "false",
+    "CloudFront-Is-SmartTV-Viewer": "false",
+    "CloudFront-Is-Tablet-Viewer": "false",
+    "CloudFront-Viewer-Country": "GB",
+    "Content-Type": "multipart/form-data; boundary=--------------------------520454081796012062965400",
+    "Host": "4bibel3v2e.execute-api.eu-west-1.amazonaws.com",
+    "Postman-Token": "7e38e8bf-e64c-46ff-8791-4b2499355c2d",
+    "User-Agent": "PostmanRuntime/7.6.0",
+    "Via": "1.1 aef9dc40779cbe9c45738d44006df755.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Id": "6ejzZ4pDLmR7fLbWojCSsr97hCaSzr9__pyR3Ea1onIlIh9Y24ujTA==",
+    "X-Amzn-Trace-Id": "Root=1-5d1caa2c-14b08a65f69eac5731adea21",
+    "x-api-key": "jVX9F6ELsdazaTYzBv2MW7cYxmSLH3G2srlH7zwj",
+    "X-Forwarded-For": "81.128.201.66, 70.132.45.68",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https"
+  },
+  "multiValueHeaders": {
+    "Accept": [
+      "*/*"
+    ],
+    "Accept-Encoding": [
+      "gzip, deflate"
+    ],
+    "cache-control": [
+      "no-cache"
+    ],
+    "CloudFront-Forwarded-Proto": [
+      "https"
+    ],
+    "CloudFront-Is-Desktop-Viewer": [
+      "true"
+    ],
+    "CloudFront-Is-Mobile-Viewer": [
+      "false"
+    ],
+    "CloudFront-Is-SmartTV-Viewer": [
+      "false"
+    ],
+    "CloudFront-Is-Tablet-Viewer": [
+      "false"
+    ],
+    "CloudFront-Viewer-Country": [
+      "GB"
+    ],
+    "Content-Type": [
+      "multipart/form-data; boundary=--------------------------520454081796012062965400"
+    ],
+    "Host": [
+      "4bibel3v2e.execute-api.eu-west-1.amazonaws.com"
+    ],
+    "Postman-Token": [
+      "7e38e8bf-e64c-46ff-8791-4b2499355c2d"
+    ],
+    "User-Agent": [
+      "PostmanRuntime/7.6.0"
+    ],
+    "Via": [
+      "1.1 aef9dc40779cbe9c45738d44006df755.cloudfront.net (CloudFront)"
+    ],
+    "X-Amz-Cf-Id": [
+      "6ejzZ4pDLmR7fLbWojCSsr97hCaSzr9__pyR3Ea1onIlIh9Y24ujTA=="
+    ],
+    "X-Amzn-Trace-Id": [
+      "Root=1-5d1caa2c-14b08a65f69eac5731adea21"
+    ],
+    "x-api-key": [
+      "jVX9F6ELsdazaTYzBv2MW7cYxmSLH3G2srlH7zwj"
+    ],
+    "X-Forwarded-For": [
+      "81.128.201.66, 70.132.45.68"
+    ],
+    "X-Forwarded-Port": [
+      "443"
+    ],
+    "X-Forwarded-Proto": [
+      "https"
+    ]
+  },
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null,
+  "requestContext": {
+    "resourceId": "igbnimysj2",
+    "resourcePath": "/",
+    "httpMethod": "PUT",
+    "extendedRequestId": "cP-G4HU4DoEFp9Q=",
+    "requestTime": "03/Jul/2019:13:14:20 +0000",
+    "path": "/development/",
+    "accountId": "470663487076",
+    "protocol": "HTTP/1.1",
+    "stage": "development",
+    "domainPrefix": "4bibel3v2e",
+    "requestTimeEpoch": 1562159660078,
+    "requestId": "77b805c2-9d94-11e9-b032-d7adab9da5f9",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "cognitoIdentityId": null,
+      "apiKey": "jVX9F6ELsdazaTYzBv2MW7cYxmSLH3G2srlH7zwj",
+      "principalOrgId": null,
+      "cognitoAuthenticationType": null,
+      "userArn": null,
+      "apiKeyId": "59mqplbk81",
+      "userAgent": "PostmanRuntime/7.6.0",
+      "accountId": null,
+      "caller": null,
+      "sourceIp": "81.128.201.66",
+      "accessKey": null,
+      "cognitoAuthenticationProvider": null,
+      "user": null
+    },
+    "domainName": "4bibel3v2e.execute-api.eu-west-1.amazonaws.com",
+    "apiId": "4bibel3v2e"
+  },
+  "body": "----------------------------520454081796012062965400\r\nContent-Disposition: form-data; name=\"a\"\r\n\r\n1\r\n----------------------------520454081796012062965400\r\nContent-Disposition: form-data; name=\"b\"\r\n\r\n2\r\n----------------------------520454081796012062965400\r\nContent-Disposition: form-data; name=\"c\"\r\n\r\n3\r\n----------------------------520454081796012062965400--\r\n",
+  "isBase64Encoded": false
+}
