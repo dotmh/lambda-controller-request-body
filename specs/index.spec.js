@@ -1,11 +1,11 @@
 const Controller = require("@dotmh/lambda-controller");
 
-const post = require("..");
+const requestBody = require("..");
 
-class PostController extends Controller {
+class TestController extends Controller {
 	constructor(event, ctx, cb) {
 		super(event, ctx, cb);
-		this.add(post);
+		this.add(requestBody);
 	}
 }
 
