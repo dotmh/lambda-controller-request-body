@@ -21,15 +21,15 @@ module.exports = {
 	get requestBody() {
 		let requestBody;
 
-		switch (this.event["Content-Type"]) {
+		switch (this.event.headers["Content-Type"]) {
 			case "application/json":
-				requestBody = this.json;
+				requestBody = this.jsonBody;
 				break;
 			case "application/x-www-form-urlencoded":
-				requestBody = this.urlencoded;
+				requestBody = this.urlencodedBody;
 				break;
 			case "text/plain":
-				requestBody = this.plain;
+				requestBody = this.plainBody;
 				break;
 			default:
 				requestBody = null;
@@ -54,6 +54,7 @@ module.exports = {
 	get rawRequestBody() {
 
 		const requestBody = this.event.body;
+		
 		if (this.isAllowedRequestBody() === false || (this.isAllowedRequestBody() && !requestBody)) {
 			return null;
 		}

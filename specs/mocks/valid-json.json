@@ -122,6 +122,6 @@
     "domainName": "4bibel3v2e.execute-api.eu-west-1.amazonaws.com",
     "apiId": "4bibel3v2e"
   },
-  "body": "{a:1, b:2, c:3}",
+  "body": "{\"a\":1, \"b\":2, \"c\":3}",
   "isBase64Encoded": false
 }

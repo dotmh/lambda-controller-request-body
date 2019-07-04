@@ -1,4 +1,5 @@
 const Controller = require("@dotmh/lambda-controller");
+const {expect} = require("chai");
 
 const requestBody = require("..");
 
@@ -14,11 +15,9 @@ class TestController extends Controller {
 describe("Lambda Controller Post Extentions", () => {
 	it("should correctly handle a valid JSON request body", function () {
 		const event = loadMock("valid-json");
-		const subject = new TestController(event, null, () => null);
+		const subject = new TestController(event, null, () => null)
 
-		console.log('TEST Controller --> ', subject);
-
-		// console.log(subject.requestBody);
+		expect(subject.requestBody).to.be.an("object").and.deep.equal({a:1, b:2, c:3});
 	});
 
 	it("should correctly handle a valid URL encoded request body");
