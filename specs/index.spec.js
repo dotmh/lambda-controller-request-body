@@ -27,5 +27,10 @@ describe("Lambda Controller Post Extentions", () => {
 		expect(subject.requestBody).to.be.an("object").and.deep.equal({a:"1", b:"2", c:"3"});
 	});
 
-	it("should correctly handle a valid Plain request body");
+	it("should correctly handle a valid Plain request body", () => {
+		const event = loadMock("valid-plain");
+		const subject = new TestController(event, null, () => null)
+
+		expect(subject.requestBody).to.be.an("string").and.equal(event.body);
+	});
 });
