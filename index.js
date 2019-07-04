@@ -52,6 +52,7 @@ module.exports = {
 	},
 
 	get rawRequestBody() {
+
 		const requestBody = this.event.body;
 		if (this.isAllowedRequestBody() === false || (this.isAllowedRequestBody() && !requestBody)) {
 			return null;

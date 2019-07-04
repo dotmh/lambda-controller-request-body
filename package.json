@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/dotmh/lambda-controller-post#readme",
   "devDependencies": {
-    "@dotmh/lambda-controller": "^1.0.1",
+    "@dotmh/lambda-controller": "^1.0.3",
     "chai": "^4.2.0",
     "codacy-coverage": "^3.4.0",
     "mocha": "^6.0.2",
