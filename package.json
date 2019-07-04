@@ -28,7 +28,8 @@
     "chai": "^4.2.0",
     "codacy-coverage": "^3.4.0",
     "mocha": "^6.0.2",
-    "nyc": "^13.3.0"
+    "nyc": "^13.3.0",
+    "xo": "^0.24.0"
   },
   "peerDependencies": {
     "@dotmh/lambda-controller": "^1.0.1"

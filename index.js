@@ -40,21 +40,20 @@ module.exports = {
 	},
 
 	get post() {
-		return this.requestBody
+		return this.requestBody;
 	},
 
 	get put() {
-		return this.requestBody
+		return this.requestBody;
 	},
 
 	get patch() {
-		return this.requestBody
+		return this.requestBody;
 	},
 
 	get rawRequestBody() {
-
 		const requestBody = this.event.body;
-		
+
 		if (this.isAllowedRequestBody() === false || (this.isAllowedRequestBody() && !requestBody)) {
 			return null;
 		}
