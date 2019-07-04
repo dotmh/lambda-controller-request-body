@@ -20,6 +20,12 @@ describe("Lambda Controller Post Extentions", () => {
 		expect(subject.requestBody).to.be.an("object").and.deep.equal({a:1, b:2, c:3});
 	});
 
-	it("should correctly handle a valid URL encoded request body");
+	it("should correctly handle a valid URL encoded request body", function () {
+		const event = loadMock("valid-urlencoded");
+		const subject = new TestController(event, null, () => null)
+
+		expect(subject.requestBody).to.be.an("object").and.deep.equal({a:"1", b:"2", c:"3"});
+	});
+
 	it("should correctly handle a valid Plain request body");
 });
