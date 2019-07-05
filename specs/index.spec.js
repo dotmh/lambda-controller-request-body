@@ -46,18 +46,63 @@ describe("Lambda Controller Post Extentions", () => {
 
 			expect(subject.requestBody).to.be.an("string").and.equal(event.body);
 		});
-
-		it("should return null for a invalid/unknown MIME Type");
-		it("should return null for a non POST, PUT, PATCH request");
 	});
 
 	describe("invalid", function () {
-		it("should return null on an invalid json");
+		it("should return null for a invalid/unknown MIME Type", function () {
+			const event = loadMock("invalid-mime");
+			const subject = new TestController(event, null, () => null);
+
+			expect(subject.requestBody).to.equal(null);
+		});
+
+		it("should return null for a non POST, PUT, PATCH request", function () {
+			const event = loadMock("invalid-verb");
+			const subject = new TestController(event, null, () => null);
+
+			expect(subject.requestBody).to.equal(null);
+		});
+
+		it("should return null on an invalid json", function () {
+			const event = loadMock("invalid-json");
+			const subject = new TestController(event, null, () => null);
+
+			expect(subject.requestBody).to.equal(null);
+		});
 	});
 
 	describe("short cut properties", function () {
-		it("should return the body data when using post()");
-		it("should return the body data when using put()");
-		it("should return the body data when using patch()");
+		it("should return the body data when using post()", function () {
+			const event = loadMock("valid-json");
+			const subject = new TestController(event, null, () => null);
+
+			expect(subject.post).to.be.an("object").and.deep.equal({
+				a: 1,
+				b: 2,
+				c: 3
+			});
+		});
+
+		it("should return the body data when using put()", function () {
+			const event = loadMock("valid-json");
+			const subject = new TestController(event, null, () => null);
+
+			expect(subject.put).to.be.an("object").and.deep.equal({
+				a: 1,
+				b: 2,
+				c: 3
+			});
+		});
+
+		it("should return the body data when using patch()", function () {
+			const event = loadMock("valid-json");
+			const subject = new TestController(event, null, () => null);
+
+			expect(subject.patch).to.be.an("object").and.deep.equal({
+				a: 1,
+				b: 2,
+				c: 3
+			});
+		});
 	});
 });
