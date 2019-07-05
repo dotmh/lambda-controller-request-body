@@ -1,7 +1,7 @@
 {
-  "name": "@dotmh/lambda-controller-post",
-  "version": "0.1.0",
-  "description": "Add HTTP POST method handling to lambda controller",
+  "name": "@dotmh/lambda-controller-request-body",
+  "version": "1.0.0",
+  "description": "Add methods for handling the request body to lambda controller",
   "main": "index.js",
   "scripts": {
     "test": "npx nyc mocha --recursive specs/*.spec.js --exit"
