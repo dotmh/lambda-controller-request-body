@@ -5,7 +5,6 @@ module.exports = {
 		try {
 			return this.rawRequestBody ? JSON.parse(this.rawRequestBody) : null;
 		} catch (error) {
-			console.error(error);
 			return null;
 		}
 	},
@@ -21,7 +20,11 @@ module.exports = {
 	get requestBody() {
 		let requestBody;
 
-		switch (this.event.headers["Content-Type"]) {
+		if (this.rawRequestBody === null) {
+			return null;
+		}
+
+		switch (this.headers["content-type"]) {
 			case "application/json":
 				requestBody = this.jsonBody;
 				break;
@@ -53,7 +56,6 @@ module.exports = {
 
 	get rawRequestBody() {
 		const requestBody = this.event.body;
-
 		if (this.isAllowedRequestBody() === false || (this.isAllowedRequestBody() && !requestBody)) {
 			return null;
 		}
@@ -66,7 +68,7 @@ module.exports = {
 	},
 
 	isAllowedRequestBody() {
-		return ["POST", "PUT", "PATCH"].includes(this.event.httpMethod.toUpperCase());
+		return ["POST", "PUT", "PATCH"].includes(this.method.toUpperCase());
 	},
 
 	_base64decode(text) {
