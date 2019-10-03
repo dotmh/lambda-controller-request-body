@@ -4,7 +4,9 @@
   "description": "Add methods for handling the request body to lambda controller",
   "main": "index.js",
   "scripts": {
-    "test": "npx nyc mocha --recursive specs/*.spec.js --exit"
+	"test": "npx nyc mocha --recursive specs/*.spec.js --exit",
+	"test:coverage": "npx nyc mocha --recursive specs/*.spec.js && cat ./coverage/lcov.info | codacy-coverage",
+	"lint" : "npx xo"
   },
   "repository": {
     "type": "git",
@@ -35,6 +37,9 @@
     "@dotmh/lambda-controller": "^1.1.0"
   },
   "xo": {
+	"ignores": [
+		"specs"
+	  ],
     "rules": {
       "quotes": [
         "error",
