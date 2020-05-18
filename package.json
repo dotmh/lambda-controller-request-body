@@ -4,13 +4,13 @@
   "description": "Add methods for handling the request body to lambda controller",
   "main": "index.js",
   "scripts": {
-	"test": "npx nyc mocha --recursive specs/*.spec.js --exit",
-	"test:coverage": "npx nyc mocha --recursive specs/*.spec.js && cat ./coverage/lcov.info | codacy-coverage",
-	"lint" : "npx xo"
+    "test": "npx nyc mocha --recursive specs/*.spec.js --exit",
+    "test:coverage": "npx nyc mocha --recursive specs/*.spec.js && cat ./coverage/lcov.info | codacy-coverage",
+    "lint": "npx xo"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/dotmh/lambda-controller-post.git"
+    "url": "git+ssh://git@github.com/dotmh/lambda-controller-request-body.git"
   },
   "keywords": [
     "DotMH",
@@ -22,9 +22,9 @@
   "author": "Martin Haynes <oss@dotmh.io>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/dotmh/lambda-controller-post/issues"
+    "url": "https://github.com/dotmh/lambda-controller-request-body/issues"
   },
-  "homepage": "https://github.com/dotmh/lambda-controller-post#readme",
+  "homepage": "https://github.com/dotmh/lambda-controller-request-body#readme",
   "devDependencies": {
     "@dotmh/lambda-controller": "^1.1.0",
     "chai": "^4.2.0",
@@ -34,12 +34,12 @@
     "xo": "^0.24.0"
   },
   "peerDependencies": {
-    "@dotmh/lambda-controller": "^1.1.0"
+    "@dotmh/lambda-controller": "^1.2.0"
   },
   "xo": {
-	"ignores": [
-		"specs"
-	  ],
+    "ignores": [
+      "specs"
+    ],
     "rules": {
       "quotes": [
         "error",
