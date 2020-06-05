@@ -1,4 +1,4 @@
- /***
+/***
  *    Copyright 2020 DotMH Martin Haynes <oss@dotmh.io>
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
- /**
+/**
   * @module lambda-controller-request-body
   */
 const querystring = require("querystring");
@@ -32,7 +32,7 @@ module.exports = {
 	get jsonBody() {
 		try {
 			return this.rawRequestBody ? JSON.parse(this.rawRequestBody) : null;
-		} catch (error) {
+		} catch (error) { /* eslint-disable-line no-unused-vars */
 			return null;
 		}
 	},
@@ -46,10 +46,10 @@ module.exports = {
 		return this.rawRequestBody ? querystring.parse(this.rawRequestBody) : null;
 	},
 
-	/** 
-	 * Get the body when it is in an unknown serialization format. This could be used to get 
-	 * data that has been sent as XML, Yaml, CSV etc. 
-	 * 
+	/**
+	 * Get the body when it is in an unknown serialization format. This could be used to get
+	 * data that has been sent as XML, Yaml, CSV etc.
+	 *
 	 * @type {string}
 	 * @author Martin Haynes <oss@dotmh.io>
 	 */
@@ -59,13 +59,13 @@ module.exports = {
 
 	/**
 	 * Get the request body based on the content-type sent in the request. If the type isn't
-	 * known then return null. 
-	 * 
-	 * Currently supported types are 
+	 * known then return null.
+	 *
+	 * Currently supported types are
 	 * - application/json
 	 * - application/x-www-form-urlencoded
 	 * - text/plain
-	 * 
+	 *
 	 * @type {object|string}
 	 * @author Martin Haynes <oss@dotmh.io>
 	 */
@@ -95,8 +95,8 @@ module.exports = {
 	},
 
 	/**
-	 * An alias to `requestBody` designed for compatablity. 
-	 * 
+	 * An alias to `requestBody` designed for compatablity.
+	 *
 	 * @deprecated
 	 * @type {object|string}
 	 * @author Martin Haynes <oss@dotmh.io>
@@ -106,8 +106,8 @@ module.exports = {
 	},
 
 	/**
-	 * An alias to `requestBody` designed for compatablity. 
-	 * 
+	 * An alias to `requestBody` designed for compatablity.
+	 *
 	 * @deprecated
 	 * @type {object|string}
 	 * @author Martin Haynes <oss@dotmh.io>
@@ -117,8 +117,8 @@ module.exports = {
 	},
 
 	/**
-	 * An alias to `requestBody` designed for compatablity. 
-	 * 
+	 * An alias to `requestBody` designed for compatablity.
+	 *
 	 * @deprecated
 	 * @type {object|string}
 	 * @author Martin Haynes <oss@dotmh.io>
@@ -128,8 +128,8 @@ module.exports = {
 	},
 
 	/**
-	 * Peforms basic validation and base64 decoding on the request body. 
-	 * 
+	 * Peforms basic validation and base64 decoding on the request body.
+	 *
 	 * @type {string}
 	 * @author Martin Haynes <oss@dotmh.io>
 	 */
@@ -148,7 +148,7 @@ module.exports = {
 
 	/**
 	 * Checks to see if the rquest is allowed to have a body
-	 * 
+	 *
 	 * @private
 	 * @param {null}
 	 * @returns {boolean} true for allowed , false for not allowed
@@ -159,8 +159,8 @@ module.exports = {
 	},
 
 	/**
-	 * Base64 decodes a string 
-	 * 
+	 * Base64 decodes a string
+	 *
 	 * @private
 	 * @param {string} text
 	 * @returns {string} The base64 decoded string
