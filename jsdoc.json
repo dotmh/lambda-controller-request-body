@@ -8,5 +8,8 @@
 		"destination" : "docs"
 	},
 	"templates": {
+		"theme" : "simplex",
+		"systemName" : "Dotmh - Lambda Controller - Request Body",
+		"inverseNav": true
 	}
 }
