@@ -6,7 +6,9 @@
   "scripts": {
     "test": "npx nyc mocha --recursive specs/*.spec.js --exit",
     "test:coverage": "npx nyc mocha --recursive specs/*.spec.js && cat ./coverage/lcov.info | codacy-coverage",
-    "lint": "npx xo"
+    "lint": "npx xo",
+    "docs": "npx jsdoc -c ./jsdoc.json index.js",
+    "readdocs": "npm run docs && npx http-server ./docs"
   },
   "repository": {
     "type": "git",
@@ -26,12 +28,14 @@
   },
   "homepage": "https://github.com/dotmh/lambda-controller-request-body#readme",
   "devDependencies": {
-    "@dotmh/lambda-controller": "^1.1.0",
+    "@dotmh/lambda-controller": "^1.2.0",
     "chai": "^4.2.0",
     "codacy-coverage": "^3.4.0",
-    "mocha": "^6.2.0",
-    "nyc": "^14.1.1",
-    "xo": "^0.24.0"
+    "mocha": "^7.1.2",
+    "nyc": "^15.0.1",
+    "xo": "^0.30.0",
+    "better-docs": "^2.0.1",
+    "jsdocs": "^1.0.0"
   },
   "peerDependencies": {
     "@dotmh/lambda-controller": "^1.2.0"
@@ -68,5 +72,6 @@
       "lcov"
     ],
     "all": true
-  }
+  },
+  "dependencies": { }
 }

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Home</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">DotMH - Lambda Controller - Request Body Plugin</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                <div class="dropdown is-hoverable is-right">
+                    <a class="dropdown-trigger link">
+                        Tutorials
+                        <i class="fas fa-chevron-down fa-xs"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Title</p>
+                    <h1>Home</h1>
+                </header>
+                
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>Lambda Control - Request Body Plugin</h1>
+<p><a href="https://www.dotmh.io"><img src="https://img.shields.io/badge/DotMH-.dev-red.svg?style=flat-square" alt="DotMH Future Gadget Lab"></a>
+<a href="https://github.com/dotmh/lambda-controller"><img src="https://img.shields.io/badge/Plugin-%CE%BB%20Controller-orange?style=flat-square" alt="Lambda Controller Plugin"></a>
+<a href="https://github.com/xojs/xo"><img src="https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square" alt="XO code style"></a>
+<a href="https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dotmh/lambda-controller-post&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/1a689fa42de04ab79d2b8f67f79aa6fa?style=flat-square" alt="Codacy Badge"></a>
+<img src="https://dotmh.semaphoreci.com/badges/lambda-controller-post.svg?key=e6d0fb01-e586-48ad-9849-5ae70280f258" alt="Build"></p>
+<p>Adds http request body handling methods support to the lambda controller</p>
+<p><strong>NOTE</strong> Does not support multipart forms.</p>
+<h1>Installation</h1>
+<p>To Install</p>
+<pre class="prettyprint source lang-sh"><code>npm i @dotmh/lambda-controller-request-body
+</code></pre>
+<p>Requires <a href="https://github.com/dotmh/lambda-controller">Lambda Controller</a> to be installed. Lambda Controller is a peer dependancy and so won't be installed automatically</p>
+<h1>Usage</h1>
+<p>To use the functionality added by this plugin you will need to add it to your controller instance.</p>
+<pre class="prettyprint source lang-js"><code>    const Controller = require('@dotmh/lambda-controller');
+    const requestBody = require('@dotmh/lambda-controller-request-body')
+
+    class MyController extends Controller {
+        constructor(event, ctx, callback) {
+            super(event, ctx, callback) {
+                this.add(requestBody);
+            }
+        }
+    }
+</code></pre>
+<p>You will then be able to access the methods and properties added by Request Body in your controller using <code>this</code></p></article>
+    </section>
+
+
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>
