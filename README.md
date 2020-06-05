@@ -41,3 +41,22 @@ To use the functionality added by this plugin you will need to add it to your co
 ```
 
 You will then be able to access the methods and properties added by Request Body in your controller using `this` 
+
+Documentation
+-------------
+For the API documentation see <https://dotmh.github.io/lambda-controller-request-body/>
+
+Or to read locally 
+
+```
+npm run readdocs
+```
+
+## Licence            
+
+This package is [Treeware](https://treeware.earth). If you use it in production, then we ask that you [**buy the world a tree**](https://plant.treeware.earth/dotmh/lambda-controller-request-body) to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
+
+Credits
+-------
+
+Logo design by [@dotmh](https://www.dotmh.io)

@@ -10,6 +10,8 @@
 	"templates": {
 		"theme" : "simplex",
 		"systemName" : "Dotmh - Lambda Controller - Request Body",
-		"inverseNav": true
+		"inverseNav": true,
+		"syntaxTheme" : "dark",
+		"copyright" : "Copyright DotMH 2020, Licensed Under Apache-2"
 	}
 }

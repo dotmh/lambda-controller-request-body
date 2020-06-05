@@ -42,7 +42,8 @@
   },
   "xo": {
     "ignores": [
-      "specs"
+      "specs",
+      "docs"
     ],
     "rules": {
       "quotes": [
