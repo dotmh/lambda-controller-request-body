@@ -28,13 +28,13 @@
   },
   "homepage": "https://github.com/dotmh/lambda-controller-request-body#readme",
   "devDependencies": {
-    "@dotmh/lambda-controller": "^1.2.0",
+    "@dotmh/lambda-controller": "^1.2.4",
     "better-docs": "^2.0.1",
     "chai": "^4.2.0",
     "codacy-coverage": "^3.4.0",
     "jsdoc": "^3.6.4",
-    "mocha": "^7.1.2",
-    "nyc": "^15.0.1",
+    "mocha": "^7.2.0",
+    "nyc": "^15.1.0",
     "xo": "^0.30.0"
   },
   "peerDependencies": {
