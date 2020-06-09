@@ -1,6 +1,6 @@
 {
   "name": "@dotmh/lambda-controller-request-body",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Add methods for handling the request body to lambda controller",
   "main": "index.js",
   "scripts": {
@@ -35,7 +35,8 @@
     "jsdoc": "^3.6.4",
     "mocha": "^7.2.0",
     "nyc": "^15.1.0",
-    "xo": "^0.30.0"
+    "xo": "^0.30.0",
+    "ink-docstrap": "^1.3.2"
   },
   "peerDependencies": {
     "@dotmh/lambda-controller": "^1.2.0"
@@ -74,7 +75,5 @@
     ],
     "all": true
   },
-  "dependencies": {
-    "ink-docstrap": "^1.3.2"
-  }
+  "dependencies": {}
 }
