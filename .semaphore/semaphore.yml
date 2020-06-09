@@ -23,11 +23,12 @@ blocks:
   - name: Test
     task:
       secrets:
-        - name: codacy
+        - name: codacy_lambda_controller_request_body
       jobs:
         - name: Test
           commands:
             - npm run test:coverage
+            - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/lcov.info
       prologue:
         commands:
           - checkout
