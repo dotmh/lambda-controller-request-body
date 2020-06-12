@@ -7,6 +7,7 @@
     "test": "npx nyc mocha --recursive specs/*.spec.js --exit",
     "test:coverage": "npx nyc mocha --recursive specs/*.spec.js && cat ./coverage/lcov.info | codacy-coverage",
     "lint": "xo",
+    "lint:md": "remark .",
     "docs": "jsdoc index.js -c ./jsdoc.json",
     "readdocs": "npm run docs && npx http-server ./docs"
   },
@@ -32,11 +33,14 @@
     "better-docs": "^2.0.1",
     "chai": "^4.2.0",
     "codacy-coverage": "^3.4.0",
+    "ink-docstrap": "^1.3.2",
     "jsdoc": "^3.6.4",
     "mocha": "^7.2.0",
     "nyc": "^15.1.0",
-    "xo": "^0.30.0",
-    "ink-docstrap": "^1.3.2"
+    "remark-cli": "^8.0.0",
+    "remark-lint": "^7.0.0",
+    "remark-preset-lint-recommended": "^4.0.0",
+    "xo": "^0.30.0"
   },
   "peerDependencies": {
     "@dotmh/lambda-controller": "^1.2.0"
@@ -75,5 +79,11 @@
     ],
     "all": true
   },
-  "dependencies": {}
+  "dependencies": {},
+  "remarkConfig": {
+    "settings" : {
+      "setext": true
+    },
+    "plugins": ["remark-preset-lint-recommended"]
+  }
 }
