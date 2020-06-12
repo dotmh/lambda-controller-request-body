@@ -82,7 +82,8 @@
   "dependencies": {},
   "remarkConfig": {
     "settings" : {
-      "setext": true
+      "setext": true,
+      "fences": true
     },
     "plugins": ["remark-preset-lint-recommended"]
   }

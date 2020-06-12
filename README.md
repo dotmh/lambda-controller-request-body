@@ -55,7 +55,9 @@ For the API documentation see <https://dotmh.github.io/lambda-controller-request
 
 Or to read locally 
 
-    npm run readdocs
+```
+npm run readdocs
+```
 
 Licence
 -------
